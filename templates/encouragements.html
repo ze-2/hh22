@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="padding-left-large" id="header">
+    <h2>View encouragements</h2>
+    <h4 class="sm-8">Message:</h4>
+    {{ message }}
+
+    <h6 class="sm-8">Contact: {{ contact }}</h6>
+    <a href="{{ url_for('submit') }}" class="paper-btn">Submit a message</a>
+    <a href="{{ url_for('view') }}" class="paper-btn">View a message</a>
+    <a href="{{ url_for('encouragements') }}" class="paper-btn">View another encouragment</a>
+
+</div>
+{% endblock %}

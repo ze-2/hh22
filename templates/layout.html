@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dear Website,</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/paper.css">
+    <!-- <script>
+        var darkMode = localStorage.getItem("darkMode");
+        var html = document.documentElement;
+
+        function checkMode() {
+            console.log(darkMode);
+            if (!darkMode) {
+                html.classList.remove('dark');
+                console.log('light mode');
+            } else if (darkMode) {
+                html.classList.add('dark');
+                console.log('dark mode');
+            } else {
+                console.log('nothing set yet');
+                localStorage.setItem("darkMode", false);
+            }
+        }
+
+        function toggleDarkMode() {
+            console.log('clicked');
+            if (!darkMode) {
+                localStorage.setItem("darkMode", true);
+            } else {
+                localStorage.setItem("darkMode", false);
+            }
+            location.reload();
+        }
+    </script> -->
+</head>
+
+<body onload="checkMode();">
+    {% block body %}
+    {% endblock %}
+</body>
+
+</html>

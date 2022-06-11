@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="padding-left-large" id="header" style="line-height: 1.3;">
+    <h2>Dear Website,</h2>
+
+    <h4>What is this website?</h4>
+    <p class="sm-8">I'm a website to let you express how you feel! Don't worry about anything and express what's on your
+        mind. There's an optional section in case you want to let people contact you; but if not, feel free to leave it
+        blank.<br><br>Others will be able to read your messages, but don't worry - it's completely anonymous unless you
+        decide to fill in your contact information. I know how sometimes we can't tell anyone around us what we truly
+        want to say, which is why I exist - a place for you to rant, a place of comfort, and a place of
+        support.<br><br>You can also leave your support for those struggling; just choose the correct category!</p>
+    <!-- <button onclick="toggleDarkMode();" class="paper-btn">Dark / Light Mode</button> -->
+    <a href="{{ url_for('submit') }}" class="paper-btn">Submit a message</a>
+    <a href="{{ url_for('view') }}" class="paper-btn">View a message</a>
+    <a href="{{ url_for('encouragements') }}" class="paper-btn">View an encouragment</a>
+</div>
+{% endblock %}

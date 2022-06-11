@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="padding-left-large" id="header">
+    <h2>Dear Website,</h2>
+</div>
+<form action="/submit" , method="POST">
+    <div class="row">
+        <div class="col sm-8">
+            <div class="form-group">
+                <textarea type="text" id="large-input" placeholder="Dear Website..."
+                    class="col border-2 border-primary margin-bottom-small" autocomplete="off" name="message" required
+                    style="width:100%; height:40vh;"></textarea>
+                <input type="text" placeholder="Where can others contact you? (optional)" style="width:100%"
+                    name="contact" class="margin-bottom">
+                <fieldset class="form-group">
+                    <legend>This is a...</legend>
+                    <label for="message" class="paper-radio">
+                        <input type="radio" name="type" id="message" value="message" required> <span>Message</span>
+                    </label>
+                    <label for="encouragement" class="paper-radio">
+                        <input type="radio" name="type" id="encouragement"
+                            value="encouragement"><span>Encouragement</span>
+                    </label>
+                </fieldset>
+                <input class="paper-btn" type="submit">
+            </div>
+            <p>You will be automatically redirected to the homepage after submission.</p>
+        </div>
+
+        <div class="col">
+            <a href="{{ url_for('index') }}" class="paper-btn">Home</a><br><br>
+            <a href="{{ url_for('view') }}" class="paper-btn">View a message</a>
+            <a href="{{ url_for('encouragements') }}" class="paper-btn">View an encouragement</a>
+        </div>
+    </div>
+</form>
+</body>
+{% endblock %}
