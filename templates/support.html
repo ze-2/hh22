@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="padding-left-large" id="header" style="line-height: 1.3;">
+    <h2>Relax</h2>
+
+    <div class="row">
+        <div class="col-6 col">
+            <h4>Playlists</h4>
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/7oetz2RMWeqzkmOZkX86fI?utm_source=generator" width="100%"
+                height="380px" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/playlist/6plOJcKGf74nPuLuPLI6aD?utm_source=generator" width="100%"
+                height="380px" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <div class="col-6 col">
+            <h4>Meditate</h4>
+            <iframe width="100%" height="40%" src="https://www.youtube.com/embed/ZToicYcHIOU"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <a href="{{ url_for('submit') }}" class="paper-btn">Submit a message</a>
+    <a href="{{ url_for('view') }}" class="paper-btn">View a message</a>
+    <a href="{{ url_for('encouragements') }}" class="paper-btn">View an encouragment</a>
+    <a href="{{ url_for('support') }}" class="paper-btn">Want some support?</a>
+    <a href="{{ url_for('index') }}" class="paper-btn">Home</a>
+    <br><br><br>
+</div>
+{% endblock %}
